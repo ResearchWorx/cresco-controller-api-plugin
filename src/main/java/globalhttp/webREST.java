@@ -69,6 +69,11 @@ public class webREST {
 
             MsgEvent me = meFromJson(crunchifyBuilder.toString());
             //MsgEvent ce = gce.cmdExec(me);
+			me.setParam("src_region", mainPlugin.getRegion());
+			me.setParam("src_agent", mainPlugin.getAgent());
+			me.setParam("src_plugin", mainPlugin.getPluginID());
+			me.setParam("dst_region", mainPlugin.getRegion());
+
 			MsgEvent ce = mainPlugin.sendRPC(me);
 
             if(ce != null)
@@ -150,7 +155,13 @@ public class webREST {
 
 
 				//MsgEvent ce = gce.cmdExec(me);
+				me.setParam("src_region", mainPlugin.getRegion());
+				me.setParam("src_agent", mainPlugin.getAgent());
+				me.setParam("src_plugin", mainPlugin.getPluginID());
+				me.setParam("dst_region", mainPlugin.getRegion());
+
 				MsgEvent ce = mainPlugin.sendRPC(me);
+
 
 				String returnString = null;
 	    		if(ce != null)
