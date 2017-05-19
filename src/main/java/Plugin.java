@@ -22,6 +22,7 @@ public class Plugin extends CPlugin {
         }
         catch (Exception ex) {
             logger.error("startHTTP() " + ex.getMessage());
+            //play
         }
     }
 
