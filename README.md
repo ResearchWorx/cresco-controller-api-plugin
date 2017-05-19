@@ -1,2 +1,2 @@
-# Cresco-Skeleton-Plugin
-A basic skeleton to implement for Cresco plugins
+# Cresco-Controller-API-Plugin
+HTTP API Calls in a Plugin
